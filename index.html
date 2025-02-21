@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    nav {
+      background-color: blue;
+      width: 100vw;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 5px;
+    }
+    ul {
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+    }
+    li {
+      text-decoration: none;
+      font-size: 25px;
+      cursor: pointer;
+      position: relative;
+      transition: .5s;
+    }
+    
+    li:hover {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        border-bottom: 2px solid black;
+        /* animation: left .5s ease-in-out; */
+      }
+    }
+    @keyframes left {
+      0% {
+        width: 0%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+  </style>
+  <body>
+    <nav>
+      <a href="/">
+        <img src="ShadowXLogo.png" width="120" alt="" />
+      </a>
+      <ul type="none">
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+      </ul>
+    </nav>
+  </body>
+</html>
